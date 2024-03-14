@@ -1,0 +1,316 @@
+{
+    "Class": "BrukerSession",
+	"Name": "OE_IR_DCE_VFA",
+	"pre_processes": [
+	    "OE_IR_T1_mapping",
+        "DCE_VFA_T1_mapping"
+	],
+	"post_processes": [
+	    "OE_deltaR1",
+        "DCE_deltaCt",
+        "DCE_ETM",
+		"OE_DCE_hypoxia_mapping"
+	],
+    "collections": [
+        {
+            "Class": "BrukerCollection",
+            "Name": "OE",
+            "bids_dir": "IR",
+            "receiver_gain_series": "OE_400",
+            "series": [
+                {
+                    "Class": "BrukerSeries",
+                    "Name": "OE_400",
+                    "bids_filename": "OE_400",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "error",
+                            "field": "InversionTime",
+                            "match_value": 400
+                        }
+                    ],
+                    "max_timepoints": 1,
+                    "min_timepoints": 1,
+                    "required_fields": [
+                        "InversionTime"
+                    ],
+                    "scan_name_contains": "MPRAGE_400ms",
+                    "squash_dimension": null
+                },
+                {
+                    "Class": "BrukerSeries",
+                    "Name": "OE_800",
+                    "bids_filename": "OE_800",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "error",
+                            "field": "InversionTime",
+                            "match_value": 800
+                        }
+                    ],
+                    "max_timepoints": 1,
+                    "min_timepoints": 1,
+                    "required_fields": [
+                        "InversionTime"
+                    ],
+                    "scan_name_contains": "MPRAGE_800ms",
+                    "squash_dimension": null
+                },
+                {
+                    "Class": "BrukerSeries",
+                    "Name": "OE_1000",
+                    "bids_filename": "OE_1000",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "error",
+                            "field": "InversionTime",
+                            "match_value": 1000
+                        }
+                    ],
+                    "max_timepoints": 1,
+                    "min_timepoints": 1,
+                    "required_fields": [
+                        "InversionTime"
+                    ],
+                    "scan_name_contains": "MPRAGE_1000ms",
+                    "squash_dimension": null
+                },
+                {
+                    "Class": "BrukerSeries",
+                    "Name": "OE_1500",
+                    "bids_filename": "OE_1500",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "error",
+                            "field": "InversionTime",
+                            "match_value": 1500
+                        }
+                    ],
+                    "max_timepoints": 1,
+                    "min_timepoints": 1,
+                    "required_fields": [
+                        "InversionTime"
+                    ],
+                    "scan_name_contains": "MPRAGE_1500ms",
+                    "squash_dimension": null
+                },
+                {
+                    "Class": "BrukerSeries",
+                    "Name": "OE_2000",
+                    "bids_filename": "OE_2000",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "error",
+                            "field": "InversionTime",
+                            "match_value": 2000
+                        }
+                    ],
+                    "max_timepoints": 1,
+                    "min_timepoints": 1,
+                    "required_fields": [
+                        "InversionTime"
+                    ],
+                    "scan_name_contains": "MPRAGE_2000ms",
+                    "squash_dimension": null
+                },
+                {
+                    "Class": "BrukerSeries",
+                    "Name": "OE_2500",
+                    "bids_filename": "OE_2500",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "error",
+                            "field": "InversionTime",
+                            "match_value": 2500
+                        }
+                    ],
+                    "max_timepoints": 1,
+                    "min_timepoints": 1,
+                    "required_fields": [
+                        "InversionTime"
+                    ],
+                    "scan_name_contains": "MPRAGE_2500ms",
+                    "squash_dimension": null
+                },
+                {
+                    "Class": "BrukerSeries",
+                    "Name": "OE_dynamic",
+                    "bids_dir": "oe",
+                    "bids_filename": "oe_dyn",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "error",
+                            "field": "InversionTime",
+                            "match_value": 2000
+                        }
+                    ],
+                    "max_timepoints": 1000000,
+                    "min_timepoints": 16,
+                    "required_fields": [
+                        "InversionTime"
+                    ],
+                    "scan_name_contains": "MPRAGE_2000ms",
+                    "squash_dimension": null
+                }
+            ]
+        },
+        {
+            "Class": "BrukerCollection",
+            "Name": "DCE",
+            "bids_dir": "VFA",
+            "receiver_gain_series": "VFA_5",
+            "series": [
+                {
+                    "Class": "BrukerSeries",
+                    "Name": "VFA_5",
+                    "bids_filename": "VFA_5",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "warning",
+                            "field": "FlipAngle",
+                            "match_value": 5
+                        }
+                    ],
+                    "max_timepoints": 1,
+                    "min_timepoints": 1,
+                    "required_fields": [
+                        "FlipAngle"
+                    ],
+                    "scan_name_contains": "MGE_FA5",
+                    "squash_dimension": {
+                            "Class": "BrukerSquashDimension",
+                            "dimension": "necho",
+                            "slices": [0],
+                            "method": "select",
+							"output_suffix": "_echo1"
+                        }
+                },
+                {
+                    "Class": "BrukerSeries",
+                    "Name": "VFA_2",
+                    "bids_filename": "VFA_2",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "warning",
+                            "field": "FlipAngle",
+                            "match_value": 2
+                        }
+                    ],
+                    "max_timepoints": 1,
+                    "min_timepoints": 1,
+                    "required_fields": [
+                        "FlipAngle"
+                    ],
+                    "scan_name_contains": "MGE_FA2",
+                    "squash_dimension": {
+                            "Class": "BrukerSquashDimension",
+                            "dimension": "necho",
+                            "slices": [0],
+                            "method": "select",
+							"output_suffix": "_echo1"
+                        }
+                },
+				{
+                    "Class": "BrukerSeries",
+                    "Name": "VFA_15",
+                    "bids_filename": "VFA_15",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "warning",
+                            "field": "FlipAngle",
+                            "match_value": 15
+                        }
+                    ],
+                    "max_timepoints": 1,
+                    "min_timepoints": 1,
+                    "required_fields": [
+                        "FlipAngle"
+                    ],
+                    "scan_name_contains": "MGE_FA15",
+                    "squash_dimension": {
+                            "Class": "BrukerSquashDimension",
+                            "dimension": "necho",
+                            "slices": [0],
+                            "method": "select",
+							"output_suffix": "_echo1"
+                        }
+                },
+				{
+                    "Class": "BrukerSeries",
+                    "Name": "VFA_30",
+                    "bids_filename": "VFA_30",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "warning",
+                            "field": "FlipAngle",
+                            "match_value": 30
+                        }
+                    ],
+                    "max_timepoints": 1,
+                    "min_timepoints": 1,
+                    "required_fields": [
+                        "FlipAngle"
+                    ],
+                    "scan_name_contains": "MGE_FA30",
+                    "squash_dimension": {
+                            "Class": "BrukerSquashDimension",
+                            "dimension": "necho",
+                            "slices": [0],
+                            "method": "select",
+							"output_suffix": "_echo1"
+                        }
+                },
+				{
+                    "Class": "BrukerSeries",
+                    "Name": "dynamic",
+                    "bids_dir": "dce",
+                    "bids_filename": "dce_dyn",
+                    "bids_overwrite": true,
+                    "match_criteria": [
+                        {
+                            "Class": "BrukerSeriesMatch",
+                            "fail_action": "warning",
+                            "field": "FlipAngle",
+                            "match_value": 30
+                        }
+                    ],
+                    "max_timepoints": 1,
+                    "min_timepoints": 20,
+                    "required_fields": [
+                        "FlipAngle"
+                    ],
+                    "scan_name_contains": "MGE_FA30",
+                    "squash_dimension": {
+                            "Class": "BrukerSquashDimension",
+                            "dimension": "necho",
+                            "slices": [0],
+                            "method": "select",
+							"output_suffix": "_echo1"
+                        }
+                }
+            ]
+        }
+    ]
+}
