@@ -139,7 +139,7 @@ outputs:
 
 steps:
   OE_IR:
-    run: OE_IR.cwl
+    run: subworkflows:OE_IR.cwl
     in:
       T1_vols: OE_T1_vols
       T1_method: OE_T1_method
@@ -163,7 +163,7 @@ steps:
           R1_t, delta_R1, R1_baseline, R1_enhancing, R1_p_vals, S_p_vals, logs]
   
   DCE_VFA:
-    run: DCE_VFA.cwl
+    run: subworkflows:DCE_VFA.cwl
     in:
       T1_vols: DCE_T1_vols
       T1_method: DCE_T1_method
@@ -232,4 +232,5 @@ steps:
           IAUC, Ktrans, enhVox, error_tracker, residuals, stats, Ct_mod, Ct_sig, params, logs]
 
 $namespaces:
-  utils: ../utils/
+  utils: https://github.com/UoMResearchIT/cwl_madym/tree/main/utils/
+  subworkflows: https://github.com/UoMResearchIT/cwl_madym/tree/main/workflows

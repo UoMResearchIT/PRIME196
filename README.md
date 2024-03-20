@@ -4,7 +4,7 @@ This is an example pipeline for the [radnet project](https://github.com/UoMResea
 
 -  `bruker_OE_IR_VFA_DCE_session.json` -- a *session-template* that is used to identify sets of files produced by an MRI scanner as belonging to this particular study. See [`PreclinicalMRI/Bruker_pre_process.py`](https://github.com/UoMResearchIT/radnet_core_pipelines/blob/main/src/PreclinicalMRI/pipelines/bruker_pre_process.py)
 -  `OE_IR_DCE_VFA.cwl` -- a *CWL-workflow* that defines the study pipeline, using tool-wrappers (and subworkflows from [cwl_madym](https://github.com/UoMResearchIT/cwl_madym))
--  `OE_IR_DCE_VFA_input.yml.template` -- an *input-template* that can be used to link the files matched by the *session-template* to the *CWL-workflow*.
+-  `OE_IR_DCE_VFA_input.yml` -- an *input-template* that can be used to link the files matched by the *session-template* to the *CWL-workflow*.
 
 The *CWL-workflow* and the *input-template* serve as public references of the study's methodology. 
 

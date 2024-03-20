@@ -1,15 +1,13 @@
 {
     "Class": "BrukerSession",
 	"Name": "OE_IR_DCE_VFA",
+    "study": "PRIME196",
+    "config": "bruker_process.cfg",
 	"pre_processes": [
-	    "OE_IR_T1_mapping",
-        "DCE_VFA_T1_mapping"
+	    "OE_IR_DCE_VFA.cwl < OE_IR_DCE_VFA_test.yml"
 	],
 	"post_processes": [
-	    "OE_deltaR1",
-        "DCE_deltaCt",
-        "DCE_ETM",
-		"OE_DCE_hypoxia_mapping"
+	    "OE_DCE_summary"
 	],
     "collections": [
         {
