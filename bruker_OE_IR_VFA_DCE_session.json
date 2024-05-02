@@ -4,10 +4,10 @@
     "study": "PRIME196",
     "config": "bruker_process.cfg",
 	"pre_processes": [
-	    "OE_IR_DCE_VFA.cwl < OE_IR_DCE_VFA_test.yml"
+	    "OE_IR_DCE_VFA.cwl < OE_IR_DCE_VFA.yml.jinja"
 	],
 	"post_processes": [
-	    "OE_DCE_summary"
+	    "OE_DCE_summary < OE_DCE_summary.cfg"
 	],
     "collections": [
         {
