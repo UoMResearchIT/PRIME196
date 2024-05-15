@@ -232,5 +232,5 @@ steps:
           IAUC, Ktrans, enhVox, error_tracker, residuals, stats, Ct_mod, Ct_sig, params, logs]
 
 $namespaces:
-  utils: https://github.com/UoMResearchIT/cwl_madym/tree/main/utils/
-  subworkflows: https://github.com/UoMResearchIT/cwl_madym/tree/main/workflows
+  utils: https://raw.githubusercontent.com/UoMResearchIT/cwl_madym/main/utils/
+  subworkflows: https://raw.githubusercontent.com/UoMResearchIT/cwl_madym/main/workflows/
